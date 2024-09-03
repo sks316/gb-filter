@@ -605,7 +605,7 @@ function yrGL(canvas_id)
 	this._canvas = document.getElementById(canvas_id);
 
 	// WebGLコンテキスト
-	this._gl = this._canvas.getContext("webgl") || this._canvas.getContext("experimental-webgl");
+	this._gl = this._canvas.getContext("webgl", {preserveDrawingBuffer: true}) || this._canvas.getContext("experimental-webgl");
 	if(!this._gl)
 	{
 		// 失敗
