@@ -138,3 +138,10 @@ onload = function()
 	}
 }
 
+function download(contentType, base64Data, fileName) {
+    const linkSource = canvas_main.toDataURL("image/png");
+    const downloadLink = document.createElement("a");
+    downloadLink.href = linkSource;
+    downloadLink.download = "gb-filter.png";
+    downloadLink.click();
+}
